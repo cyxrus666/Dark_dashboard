@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script>
+  function notifyMe() {
+if (!("Notification" in window)) {
+alert("You can show notification for analys and security your website !");
+} else if (Notification.permission === "granted") {
+const notification = new Notification("You can show notification for analys and security your website !");
+} else if (Notification.permission !== "denied") {
+Notification.requestPermission().then((permission) => {
+if (permission === "granted") {
+  const notification = new Notification("You can show notification for analys and security your website !");
+}
+});
+}
+}
+</script>
+<script>
+const clH = document.querySelector("Hmenu");
+function HC() {
+  var x = document.getElementById("Hmenu");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+document.addEventListener("click", () => clH.style.visibility = "hidden");
+</script>
+<style>
+  #prev,#next{transition: 0.5s;}
+  #prev:hover{color: #fff;}
+  #next:hover{color: #fff;}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <div class="Menu-popup" style="cursor: pointer;" onclick="HC()">
+    <span class="material-symbols-rounded" style="cursor: pointer;" id="Mmencl">
+      menu
+      </span>
+  </div>
+  <div class="mobile-nav" id="Hmenu">
+    <li style="cursor: pointer;">Security</li>
+    <li style="cursor: pointer;">Users</li>
+    <li style="cursor: pointer;">Analys</li>
+    <li style="cursor: pointer;">Support</li>
+    <li style="cursor: pointer;">License</li>
+  </div>
+       <a href="#"><div class="icon"></div></a>
+    <span>
+    <input type="text" class="search-box" placeholder='press "Enter" to searching'>
+        </span>
+          <a href="#">
+            <div class="profile">
+                <img src="/pexels-uncoveredlens-eze-joshua-5302784.jpg" width="40px" height="40px" style="border-radius: 50%;">
+                   <span style="margin-left: 10px;">
+                     Lisa white
+                       </span>
+                          <!-- <span class="material-symbols-rounded" style="margin-left: 10px;">
+                            expand_more
+                              </span>
+                            <div class="select-profile-option">
+                                <li><Span style="margin-left: 10px;">Change picture</Span></li>
+                                <li><Span style="margin-left: 10px;">Setting</Span></li>
+                                <li><Span style="margin-left: 10px;">Manage account</Span></li>
+                                <li><Span style="margin-left: 10px;">License</Span></li>
+                                <li><Span style="margin-left: 10px;">Logout</Span></li>
+                              </div> -->
+                            </div>
+                          </a>
+                         <label class="notification" onclick="notifyMe()">
+                            <input type="checkbox">
+                            <i style="width: 100%;height: 100%;">
+                      <span class="material-symbols-rounded">
+                    notifications
+                  </span>
+                </i>
+               </label>
+              </header>
+    <div class="nav">
+        <li>
+        <span class="material-symbols-rounded" id="nav-sp">
+            dashboard
+            </span>
+        </li>
+            <li>
+            <span class="material-symbols-rounded" id="nav-sp">
+                shield
+            </span>
+        </li>
+            <li>
+            <span class="material-symbols-rounded" id="nav-sp">
+                group
+            </span>
+        </li>
+            <li>
+            <span class="material-symbols-rounded" id="nav-sp">
+                signal_cellular_alt
+            </span>
+        </li>
+            <li>
+            <span class="material-symbols-rounded">
+                    forum
+            </span>
+        </li>
+            <li>
+            <span class="material-symbols-rounded" id="nav-sp">
+                check_circle
+            </span>
+        </li>
+            <li style="margin-top: 190px;">
+        <span class="material-symbols-rounded" id="nav-sp" style="color: rgb(228, 83, 83);">
+            logout
+            </span>
+        </li>
+    </div>
+    <div class="Last-sec">
+
+    <!--
+    <div class="tmp">
+        <h1 style="margin-left: 30px;"></h1>
+        <div class="clumn1-wid">
+        <div class="activite widget" style="cursor: pointer;background: #faab63;">
+        <a>Activite</a>
+        <img src="https://cy-editor.ir/dsh/12.1df6093de09d2b4ad6a3.svg">
+        </div>
+        <div class="history widget" style="cursor: pointer;background: #6bc5d2;margin-top: 5px;">
+        <a>History</a>
+        <img src="https://cy-editor.ir/dsh/7.973cebdcc396a8f97b39.svg">
+        </div>
+    </div>
+    <div class="clumn2-wid">
+        <div class="visit widget" style="cursor: pointer;background: #5a5d9d;">
+        <a>Visit</a>
+        <img src="https://cy-editor.ir/dsh/13.750086648d9b837ea284.svg">
+        </div>
+        <div class="ticket widget" style="cursor: pointer;background: #61bdf6;margin-top: 5px;">
+        <a>Support ticket</a>
+        <img src="https://cy-editor.ir/dsh/10.9576740fc770b4889ab1.svg">
+      </div>
+     </div>
+     <div class="txt-tmp">
+        <p>
+          You can costomize you data and website in this part . If you like undo back data you can click history widget and Activte show live visitors for your website. Visit widget show you all visitors for start your website working and for <A href="#">terms</A> & <A href="#">privacy</A> you can't send message for visitors without support ticket widget part . If you see bug you can send screenshot and bug information for <A href="#">support</A> .
+        </p>
+     </div>
+    </div>
+  -->
+    <div class="F-T-items">
+      <div class="switch-itms">
+        <div class="ssl F-T">
+          <span class="material-symbols-rounded">
+            lock
+            </span>
+            <A style="margin-left: 10px;font-size: 17px;font-weight: 500;">SSL</A>
+            <div class="swirch-box">
+            <label class="switch">
+              <input type="checkbox">
+              <i></i>
+            </label>
+            <button class="info-btn">
+              
+              <span class="material-symbols-rounded">
+                info
+            </span>
+            </button>
+            </div>
+        </div>
+        <div class="seo F-T" style="margin-top: 6px;">
+          <span class="material-symbols-rounded">
+            manage_search
+            </span>
+            <A style="margin-left: 10px;font-size: 17px;font-weight: 500;">SEO</A>
+            <div class="swirch-box">
+            <label class="switch">
+              <input type="checkbox">
+              <i></i>
+            </label>
+            <button class="info-btn">
+              
+              <span class="material-symbols-rounded">
+                info
+            </span>
+            </button>
+            </div>
+        </div>
+        <div class="cloud F-T" style="margin-top: 6px;">
+          <span class="material-symbols-rounded">
+            cloud
+            </span>
+            <A style="margin-left: 10px;font-size: 17px;font-weight: 500;">HST</A>
+            <div class="swirch-box">
+            <label class="switch">
+              <input type="checkbox">
+              <i></i>
+            </label>
+            <button class="info-btn">
+
+              <span class="material-symbols-rounded">
+                info
+            </span>
+            </button>
+            </div>
+        </div>
+        <div class="cloud F-T" style="margin-top: 6px;">
+          <span class="material-symbols-rounded">
+            devices
+            </span>
+            <A style="margin-left: 10px;font-size: 17px;font-weight: 500;">DVC</A>
+            <div class="swirch-box">
+            <label class="switch">
+              <input type="checkbox">
+              <i></i>
+            </label>
+            <button class="info-btn">
+              
+              <span class="material-symbols-rounded">
+                info
+            </span>
+            </button>
+            </div>
+        </div>
+      </div>
+        <div class="Hosts">
+          <h2 style="margin-left: 0.3rem;">Hosts</h2>
+          <div class="select-host">
+            <textarea style="margin-top: 15px;">Enter URL</textarea>
+            <div class="swirch-box">
+            <label class="hostswch switch">
+              <input type="checkbox">
+              <i></i>
+            </label>
+            <button class="info-btn">
+                
+              <span class="material-symbols-rounded">
+                info
+            </span>
+            </button>
+          </div>
+          </div>
+          </div>
+          <div class="Activate">
+            <span class="material-symbols-rounded" style="color: rgb(85, 188, 85);margin-left: 2rem;align-items: center;justify-content: center;display: flex;">
+              check_circle
+              </span>
+              <a style="margin-left: 1rem;">
+              Activated
+            </a>
+            <a style="color: #999999;right: 2.5rem;position: absolute;" class="activate-message">
+              This account activated by hosting compony
+            </a>
+          </div>
+          <div class="Whats-new">
+            <div class="Blur-news" style="backdrop-filter: blur(0px);position: absolute;width: 100%;height: 100%;">
+            <h3 style="margin-top: 2rem;margin-left: 2rem;">What's new?</h3>
+            <p style="margin-left: 2rem;margin-top: 2rem;color: #c6c6c6;">The CY company created new service !<br>This service is website creation paltform without coding.<br>CY compony hope to enjoy .</p>
+            <a href="#">
+            <button class="see-more-news" title="See more">
+              <span class="material-symbols-rounded">
+                chevron_right
+                </span>
+            </button>
+          </a>
+        </div>
+          </div>
+        <div class="storge counter" style="top: 0;">
+          <h1 style="font-size: 21px;margin-top: 3rem;margin-left: 2rem;" class="counter-title">Storge</h1>
+          <p style="color: #999999;font-size: 13px;margin-left: 2rem;" class="counter-discription">
+          You can see a storge<br>usable for you website<br>storge.
+          </p>
+          <div class="cir-chart">
+            <a style="position: absolute;margin-top: 32px;margin-left: 30px;">86%</a>
+          <svg>
+            <circle cx="38" cy="38" r="36"></circle>
+        </svg>
+      </div>
+        </div>
+        <div class="database counter" style="margin-top: -190px;">
+          <h1 style="font-size: 21px;margin-top: 3rem;margin-left: 2rem;">Database</h1>
+          <p style="color: #999999;font-size: 13px;margin-left: 2rem;">
+          You can see your<br>database for you website <br>database.
+          </p>
+          <div class="cir-chart">
+            <a style="position: absolute;margin-top: 32px;margin-left: 35px;font-size: 20px;">∞</a>
+          <svg>
+            <circle cx="38" cy="38" r="36" style="stroke-dasharray: unset;stroke-dashoffset: unset;"></circle>
+        </svg>
+      </div>
+        </div>
+  </div>
+  <div class="Workers">
+    <div class="wrapper">
+      <header>
+        <p class="current-date" style="margin-left: 55px;color: #fff;"></p>
+        <div class="icons">
+          <span id="prev" class="material-symbols-rounded" title="previous month">chevron_left</span>
+          <span id="next" class="material-symbols-rounded" title="next month">chevron_right</span>
+        </div>
+      </header>
+      <div class="calendar">
+        <ul class="weeks">
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+        </ul>
+        <ul class="days"></ul>
+      </div>
+    </div>
+
+    <div class="tmp">
+        <h1 style="margin-left: 30px;"></h1>
+        <div class="clumn1-wid">
+        <div class="activite widget" style="cursor: pointer;background: #faab63;">
+        <a>Activite</a>
+        <img src="/12.1df6093de09d2b4ad6a3.svg">
+        </div>
+        <div class="widget" style="cursor: pointer;background: #6bc5d2;margin-top: 5px;">
+        <a>History</a>
+        <img src="/7.973cebdcc396a8f97b39.svg">
+        </div>
+    </div>
+    <div class="clumn2-wid">
+        <div class="visit widget" style="cursor: pointer;background: #5a5d9d;">
+        <a>Visit</a>
+        <img src="/13.750086648d9b837ea284.svg">
+        </div>
+        <div class="ticket widget" style="cursor: pointer;background: #61bdf6;margin-top: 5px;">
+        <a>Support ticket</a>
+        <img src="/10.9576740fc770b4889ab1.svg">
+      </div>
+     </div>
+     <div class="txt-tmp">
+        <p>
+          You can costomize you data and website in this part . If you like undo back data you can click history widget and Activte show live visitors for your website. Visit widget show you all visitors for start your website working and for <A href="#">terms</A> & <A href="#">privacy</A> you can't send message for visitors without support ticket widget part . If you see bug you can send screenshot and bug information for <A href="#">support</A> .
+        </p>
+     </div>
+    </div>
+  </div>
+<script>
+  const daysTag = document.querySelector(".days"),
+currentDate = document.querySelector(".current-date"),
+prevNextIcon = document.querySelectorAll(".icons span");
+
+// getting new date, current year and month
+let date = new Date(),
+currYear = date.getFullYear(),
+currMonth = date.getMonth();
+
+// storing full name of all months in array
+const months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
+
+const renderCalendar = () => {
+    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+    lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+    let liTag = "";
+
+    for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
+        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+    }
+
+    for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
+        // adding active class to li if the current day, month, and year matched
+        let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
+                     && currYear === new Date().getFullYear() ? "active" : "";
+        liTag += `<li class="${isToday}">${i}</li>`;
+    }
+
+    for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
+        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+    }
+    currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+    daysTag.innerHTML = liTag;
+}
+renderCalendar();
+
+prevNextIcon.forEach(icon => { // getting prev and next icons
+    icon.addEventListener("click", () => { // adding click event on both icons
+        // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
+        currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+
+        if(currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
+            // creating a new date of current year & month and pass it as date value
+            date = new Date(currYear, currMonth, new Date().getDate());
+            currYear = date.getFullYear(); // updating current year with new date year
+            currMonth = date.getMonth(); // updating current month with new date month
+        } else {
+            date = new Date(); // pass the current date as date value
+        }
+        renderCalendar(); // calling renderCalendar function
+    });
+});
+</script>
+</body>
+</html>
